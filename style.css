@@ -1,0 +1,54 @@
+html, body, *, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100vw;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+}
+
+#bg_img {
+    height: 100%;
+    width: 100%;
+    background: url(./IMAGES/bg_img.jpg) no-repeat;
+    background-size: cover;
+    filter: brightness(0.4);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+header, nav, nav ul {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgba(255, 255, 255, 0.944); */
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li button {
+    padding: 20px 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border-style: none;
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+nav li button:hover {
+    background-color: rgb(225, 137, 6);
+}
