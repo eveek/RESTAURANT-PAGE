@@ -2,6 +2,13 @@ html, body, *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --bg-color: rgb(243, 243, 240);
+    --green: rgb(65, 157, 3);
+    --grey: rgb(112, 112, 112);
 }
 
 html, body {
@@ -14,15 +21,24 @@ html, body {
     width: 100%;
 }
 
-#bg_img {
-    height: 100%;
-    width: 100%;
-    background: url(./IMAGES/bg_img.jpg) no-repeat;
+#home_bg_img {
+    background: url(./IMAGES/burger.jpg) no-repeat;
     background-size: cover;
-    filter: brightness(0.4);
+}
+
+#home_bg_img, #menu_bg_img {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    padding: 20px 0;
 }
 
 header, nav, nav ul {
@@ -32,7 +48,6 @@ header, nav, nav ul {
 nav ul {
     display: flex;
     justify-content: space-evenly;
-    /* background-color: rgba(255, 255, 255, 0.944); */
 }
 
 nav li {
@@ -44,11 +59,58 @@ nav li button {
     font-size: 20px;
     background-color: transparent;
     border-style: none;
-    color: white;
-    border-radius: 10px;
+    color: var(--grey);
     font-weight: bolder;
+    border-bottom: 2px solid transparent;
 }
 
 nav li button:hover {
-    background-color: rgb(225, 137, 6);
+    border-bottom: 2px solid var(--green);
+    color: var(--green);
+}
+
+#home {
+    color: black;
+    font-size: 70px;
+    padding: 150px 100px;
+    display: none;
+}
+
+#home h1 {
+    font-family: montserat;
+    margin-bottom: 20px;
+}
+
+#home button {
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: var(--green);
+    color: white;
+    border-style: none;
+    font-weight: bold;
+    transition: ease-in-out 100ms;
+}
+
+#home p {
+    font-size: 30px;
+    color: rgb(112, 112, 112);
+}
+
+#home span {
+    font-family: montserat;
+    background-color: rgba(221, 220, 220, 0.946);
+}
+
+#home button:hover {
+    transform: scale(1.05);
+}
+
+button {
+    cursor: pointer;
+}
+
+
+#menu_bg_img {
+    background-color: var(--bg-color);
 }
