@@ -16,6 +16,10 @@ html, body {
     width: 100vw;
 }
 
+h1 {
+    font-family: montserat;
+}
+
 #content {
     height: 100%;
     width: 100%;
@@ -26,7 +30,7 @@ html, body {
     background-size: cover;
 }
 
-#home_bg_img, #menu_bg_img {
+#home_bg_img, #menu_bg_img, #contact_bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -36,8 +40,9 @@ html, body {
 }
 
 header {
+    padding: 0 100px;
     padding-top: 20px;
-    /* box-shadow: 0px 0px 9px 0px #00000057; */
+
 }
 
 header, nav, nav ul {
@@ -51,32 +56,50 @@ nav ul {
 
 nav li {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 nav li button {
     padding: 20px 10px;
-    font-size: 20px;
+    font-size: 18px;
     background-color: transparent;
     border-style: none;
     color: var(--grey);
-    font-weight: bolder;
+    /* font-weight: bolder; */
     border-bottom: 2px solid transparent;
+}
+
+nav {
+    display: flex;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
 }
 
 nav li button:hover {
     border-bottom: 2px solid var(--green);
     color: var(--green);
 }
+nav li button.active {
+    border-bottom: 2px solid var(--green);
+    color: var(--green);
+}
+
+
+
+/* HOME */
 
 #home {
     color: black;
     font-size: 70px;
     padding: 150px 100px;
-    display: none;
+    /* display: none; */
 }
 
 #home h1 {
-    font-family: montserat;
     margin-bottom: 20px;
 }
 
@@ -91,8 +114,10 @@ nav li button:hover {
     transition: ease-in-out 100ms;
 }
 
+
+
 #home p {
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(112, 112, 112);
 }
 
@@ -109,8 +134,11 @@ button {
     cursor: pointer;
 }
 
-#menu_bg_img {
+/* MENU */
+
+#menu_bg_img, #contact_bg {
     background-color: var(--bg-color);
+    background-size: cover;
 }
 
 #menu {
@@ -125,18 +153,20 @@ button {
     margin-bottom: 50px;
     margin-top: -100px;
     font-size: 70px;
-    font-family: montserat;
     color: var(--green);
 }
 
 #menu #menu_box {
     display: flex;
     justify-content: space-between;
+    background-color: #f4a145;
+    padding: 30px;
+    border-radius: 30px;
 }
 
 #menu .menu_items {
-    width: 22%;
-    height: 300px;
+    width: 300px;
+    height: 355px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 0px 11px 0px #00000021;
@@ -144,8 +174,8 @@ button {
 }
 
 #menu_box .menu_items .picture {
-    border-radius: 20px 20px 0 0;
-    height: 180px;
+    border-radius: 20px;
+    height: 200px;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -160,7 +190,7 @@ button {
     background-size: cover;
 }
 #menu_box .menu_items:nth-child(3) .picture {
-    background: url(./IMAGES/pizza.png) no-repeat;
+    background: url(./IMAGES/burger1.jpg) no-repeat;
     background-size: cover;
 }
 #menu_box .menu_items:nth-child(4) .picture {
@@ -191,3 +221,9 @@ button {
     width: 100%;
     /* font-family: montserat; */
 }
+
+
+/* CONTACT
+#contact h1 {
+    font-size: 50px;
+} */
